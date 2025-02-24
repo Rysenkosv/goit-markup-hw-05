@@ -520,79 +520,204 @@ overflow: hidden;
       fill: var(--icon-color, #f4f4fd);
   }
   /* model */
-  .model-overlay{
+  .modal-overlay {
+    position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
     width: 100%;
     height: 100%;
-    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
     /* opacity: 0;
-    pointer-events:none;
+    pointer-events: none;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); */
-  }
-    /* .model-overlay.is-open{
-        opacity: 1;
-        pointer-events: auto;
+}
 
-    } */
+/* .modal-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+} */
 
-
-  .model {
-    background-color: #fcfcfc;
+.modal {
+    background-color: #fff;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     max-width: 408px;
-    max-height: 584px;
-    margin: 0 auto;
-    overflow-y: auto;
+    padding: 72px 24px 24px 24px;
+    position: relative;
 }
-.form-tittle{
-    margin-top: 72px;
+
+/* ----- Кнопка закриття модального вікна ----- */
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ----- Заголовок форми ----- */
+.form-title {
     font-weight: 500;
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: 0.02em;
-text-align: center;
-color: #2e2f42;
-}
-.contact-form {
-    
-
-
-}
-.first-set-contact{
- 
-}
-.label-contact-form{
-   
-    
-}
-.trxterea-contact {
-   
-}
-.model__button {font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    margin-bottom: 16px;
+}
+
+/* ----- Поля форми ----- */
+.first-set-contact {
+    display: flex;
+    flex-direction: column;
+    /* gap: 8px; */
+}
+
+/* ----- Стилізація інпутів з іконками ----- */
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    transition: border-color 0.3s ease;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    width: 360px;
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+.input-wrapper:focus-within {
+    border-color: #4d5ae5;
+}
+
+input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    background: transparent;
+}
+
+.contact-form label:not(.input-wrapper):not(.checkbox-label) {
+   margin-bottom: 4px;
+   display: block;
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 1.16667;
+   letter-spacing: 0.04em;
+   color: #8e8f99;
+}
+/* ----- Стилізація SVG-іконок ----- */
+.icon {
+    width: 18px;
+    height: 24px;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.input-wrapper:focus-within .icon {
+    color: #4d5ae5;
+}
+
+/* ----- Поле для коментаря ----- */
+.textarea-contact {
+    width: 360px;
+    height: 120px;
+    padding-top: 8px;
+    padding-left: 16px;
+    border-radius: 4px;
+    resize: none;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
     letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    border: 1px solid rgba(46, 47, 66, 0.4);
+}
+
+.textarea-contact:focus {
+    border-color: #4d5ae5;
+    outline: none;
+}
+
+/* ----- Чекбокс ----- */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    gap: ;
+    margin: 12px 0px 16px;
+}
+
+.hidden-checkbox {
+    display: none;
+}
+
+.custom-checkbox {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #4d5ae5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.icon-check {
+    width: 12px;
+    height: 12px;
+    color: transparent;
+    transition: color 0.3s ease;
+}
+
+/* ----- Активація чекбокса ----- */
+.hidden-checkbox:checked + .custom-checkbox {
+    background-color: #4d5ae5;
+}
+
+.hidden-checkbox:checked + .custom-checkbox .icon-check {
+    color: #fff;
+}
+
+/* ----- Стилізація посилання в чекбоксі ----- */
+.checkbox-label a {
+    color: #4d5ae5;
+    text-decoration: none;
+}
+
+.checkbox-label a:hover {
+    text-decoration: underline;
+}
+
+/* ----- Кнопка відправки ----- */
+.modal-button {
+    font-weight: 500;
+    font-size: 16px;
     color: #fff;
     background: #4d5ae5;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    display: block;
     min-width: 169px;
     height: 56px;
     margin: 0 auto;
     border: none;
     border-radius: 4px;
-    transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-.model__button:hover,.model__button:focus{
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button:hover,
+.modal-button:focus {
     background-color: #404bbf;
 }

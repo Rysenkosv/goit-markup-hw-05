@@ -482,39 +482,55 @@
         </div>
       </div>
     </footer>
-    <div class="model-overlay">
-      <div class="model">
-        <h2 class="form-tittle">Leave your contacts and we will call you back</h2>
-        <form class="contact-form">
-          <fieldset class="first-set-contact">
-            <label class="label-contact-form">
-              Name
-              <input type="text" name="username" required />
-            </label>
-            <label class="label-contact-form">
-              Phone
-              <input type="tel" name="contact_tel" required />
-            </label>
-            <label class="label-contact-form">
-              Email
-              <input type="email" name="email" required/>
-            </label>
-            <label>
-              Comment
-              <textarea class="trxterea-contact" 
-              name="feedback" 
-              rows="5" 
-              placeholder="Text input">
-            </textarea>
-            <label>
-    <input type="checkbox" name="check" value="accept" />
-    I accept the terms and conditions of the Privacy Policy
-  </label>
-          </fieldset>
-          <button class="model__button" type="submit">Send</button>
-        </form>
-
+    <!-- model -->
+    <div class="modal-overlay">
+      <div class="modal">
+          <button class="modal-close">&times;</button>
+          <h2 class="form-title">Leave your contacts and we will call you back</h2>
+          <form class="contact-form first-set-contact">
+  
+              <label for="username">Name</label>
+              <label class="input-wrapper">
+                  <svg class="icon icon-user">
+                      <use href="icons.svg#icon-user"></use>
+                  </svg>
+                  <input type="text" id="username" name="username" required />
+              </label>
+  
+              <label for="contact_tel">Phone</label>
+              <label class="input-wrapper">
+                  <svg class="icon icon-phone">
+                      <use href="icons.svg#icon-phone"></use>
+                  </svg>
+                  <input type="tel" id="contact_tel" name="contact_tel" required />
+              </label>
+  
+              <label for="email">Email</label>
+              <label class="input-wrapper">
+                  <svg class="icon icon-email">
+                      <use href="icons.svg#icon-email"></use>
+                  </svg>
+                  <input type="email" id="email" name="email" required />
+              </label>
+  
+              <label for="feedback">Comment</label>
+              <label class="label-comment">
+                  <textarea class="textarea-contact" id="feedback" name="feedback" placeholder="Text input"></textarea>
+              </label>
+  
+              <label class="checkbox-label">
+                  <input type="checkbox" name="check" value="accept" class="hidden-checkbox" />
+                  <span class="custom-checkbox">
+                      <svg class="icon-check">
+                          <use href="icons.svg#icon-check"></use>
+                      </svg>
+                  </span>
+                  <p>I accept the terms and conditions of the <a href="#">Privacy Policy</a></p>
+              </label>
+  
+              <button class="modal-button" type="submit">Send</button>
+          </form>
       </div>
-    </div>
+  </div>
   </body>
 </html>
