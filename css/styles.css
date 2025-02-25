@@ -599,7 +599,7 @@ overflow: hidden;
 } */
   /* model */
 
-.modal_overlay {
+  .modal_overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -680,7 +680,7 @@ overflow: hidden;
 }
 
 .form_field {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .form_label {
