@@ -472,59 +472,60 @@
           </div>
       </div>
   </footer>
-    <!-- model -->
-    <div class="modal-overlay">
-      <div class="modal">
-        <button class="modal-close">
-          <svg class="modal-close-icon">
-              <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
-          </svg>
-      </button>
-          <h2 class="form-title">Leave your contacts and we will call you back</h2>
-          <form class="contact-form first-set-contact">
-  
-              <label for="username">Name</label>
-              <label class="input-wrapper">
-                  <svg class="icon icon-user"  width="24" height="24">
-                      <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
-                  </svg>
-                  <input type="text" id="username" name="username" required />
-              </label>
-  
-              <label for="contact_tel">Phone</label>
-              <label class="input-wrapper">
-                  <svg class="icon icon-phone">
-                      <use href="/images/icons.svg#icon-phone-black-18dp"></use>
-                  </svg>
-                  <input type="tel" id="contact_tel" name="contact_tel" required />
-              </label>
-  
-              <label for="email">Email</label>
-              <label class="input-wrapper">
-                  <svg class="icon icon-email">
-                      <use href="/images/icons.svg#icon-email-black-18dp"></use>
-                  </svg>
-                  <input type="email" id="email" name="email" required />
-              </label>
-  
-              <label for="feedback">Comment</label>
-              <label class="label-comment">
-                  <textarea class="textarea-contact" id="feedback" name="feedback" placeholder="Text input"></textarea>
-              </label>
-  
-              <label class="checkbox-label">
-                  <input type="checkbox" name="check" value="accept" class="hidden-checkbox" />
-                  <span class="custom-checkbox">
-                      <svg class="icon-check">
-                          <use href="./images/icons.svg#icon-Vectorgal"></use>
-                      </svg>
-                  </span>
-                  <p>I accept the terms and conditions of the <a href="#">Privacy Policy</a></p>
-              </label>
-  
-              <button class="modal-button" type="submit">Send</button>
-          </form>
-      </div>
-  </div>
+  <div class="modal_overlay">
+    <div class="modal_window">
+        <button type="button" class="modal_close">
+            <svg class="modal_close_icon" width="8" height="8">
+                <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
+            </svg>
+        </button>
+        <p class="modal_title">Leave your contacts and we will call you back</p>
+        <form class="contact_form">
+            <div class="form_field">
+                <label for="user-name" class="form_label">Name</label>
+                <div class="input_container">
+                    <input type="text" id="user-name" name="user-name" class="form_input" required />
+                    <svg class="input_icon" width="18" height="24">
+                        <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="form_field">
+                <label for="user-phone" class="form_label">Phone</label>
+                <div class="input_container">
+                    <input type="tel" id="user-phone" name="user-phone" class="form_input" required />
+                    <svg class="input_icon" width="18" height="24">
+                        <use href="./images/icons.svg#icon-phone-black-18dp"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="form_field">
+                <label for="user-email" class="form_label">Email</label>
+                <div class="input_container">
+                    <input type="email" id="user-email" name="user-email" class="form_input" required />
+                    <svg class="input_icon" width="18" height="24">
+                        <use href="./images/icons.svg#icon-email-black-18dp"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="form_field">
+                <label for="user-comment" class="form_label">Comment</label>
+                <textarea id="user-comment" name="user-comment" class="form_textarea" placeholder="Text input"></textarea>
+            </div>
+            <div class="form_field">
+                <label class="checkbox_label">
+                    <input type="checkbox" id="user-privacy" name="user-privacy" value="true" class="visually_hidden" />
+                    <span class="custom_checkbox">
+                        <svg class="checkbox_icon" width="10" height="8">
+                            <use href="./images/icons.svg#icon-Vectorgal"></use>
+                        </svg>
+                    </span>
+                    I accept the terms and conditions of the <a href="#" class="privacy_link">Privacy Policy</a>
+                </label>
+            </div>
+            <button type="submit" class="submit_button">Send</button>
+        </form>
+    </div>
+</div>
   </body>
 </html>
