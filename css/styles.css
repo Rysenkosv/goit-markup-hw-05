@@ -610,15 +610,15 @@ overflow: hidden;
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
-    /* transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
-    visibility: hidden; */
+    visibility: hidden;
 }
 
-/* .modal_overlay.is_open {
+.modal_overlay.is_open {
     opacity: 1;
     visibility: visible;
-} */
+}
 
 .modal_window {
     position: absolute;
@@ -747,26 +747,9 @@ overflow: hidden;
     border-color:#4D5AE5;
 }
 
-.checkbox_label {
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    color: #8e8f99;
-    margin-bottom: 24px;
-}
 
-.custom_checkbox {
-    width: 16px;
-    height: 16px;
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 2px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 8px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.checkbox_container {
+    margin-bottom: 24px;
 }
 
 .visually_hidden {
@@ -782,21 +765,50 @@ overflow: hidden;
     overflow: hidden;
 }
 
-.visually_hidden:checked + .custom_checkbox {
-    background-color: #404bbf;
+.checkbox_label {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--text-gray, #8e8f99);
+    cursor: pointer; /* Додано курсор для кращої взаємодії */
+}
+
+.custom_checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+                border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+                fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: transparent;
+    margin-right: 8px;
+}
+
+.checkbox_icon {
+    width: 10px;
+    height: 8px;
+}
+
+.visually_hidden:checked + .checkbox_label .custom_checkbox {
+    background-color: var(--checkbox-blue, #404bbf);
     border: none;
-    fill: #f4f4fd;
+    fill: var(--icon-white, #F4F4FD);
 }
 
 .privacy_link {
-    color: #4d5ae5;
+    color: var(--link-blue, #4d5ae5);
     text-decoration: none;
 }
 
 .privacy_link:hover {
     text-decoration: underline;
 }
-
 .submit_button {
     display: block;
     min-width: 169px;

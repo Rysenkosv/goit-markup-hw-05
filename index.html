@@ -513,17 +513,17 @@
                 <label for="user-comment" class="form_label">Comment</label>
                 <textarea id="user-comment" name="user-comment" class="form_textarea" placeholder="Text input"></textarea>
             </div>
-            <div class="form_field">
-                <label class="checkbox_label" for="user-privacy">
-                    <input type="checkbox" id="user-privacy" name="user-privacy" value="true" class="visually_hidden" />
-                    <span class="custom_checkbox">
-                        <svg class="checkbox_icon" width="10" height="8">
-                            <use href="./images/icons.svg#icon-Vectorgal"></use>
-                        </svg>
-                    </span>
-                    I accept the terms and conditions of the <a href="#" class="privacy_link">Privacy Policy</a>
-                </label>
-            </div>
+            <div class="checkbox_container">
+              <input type="checkbox" id="user-privacy" name="user-privacy" value="true" class="visually_hidden" />
+              <label for="user-privacy" class="checkbox_label">
+                  <span class="custom_checkbox">
+                      <svg class="checkbox_icon" width="10" height="8">
+                          <use href="./images/icons.svg#icon-Vectorgal"></use>
+                      </svg>
+                  </span>
+                  I accept the terms and conditions of the <a href="#" class="privacy_link">Privacy Policy</a>
+              </label>
+          </div>
             <button type="submit" class="submit_button">Send</button>
         </form>
     </div>
