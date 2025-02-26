@@ -726,10 +726,6 @@ overflow: hidden;
 .form_input:focus + .input_icon {
     fill: #4D5AE5;
 }
-.form_comment{
-    margin-bottom: 16px;
-
-}
 
 .form_textarea {
     width: 100%;
