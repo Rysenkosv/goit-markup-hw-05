@@ -615,10 +615,10 @@ overflow: hidden;
     visibility: hidden;
 }
 
-.modal_overlay.is_open {
+/* .modal_overlay.is_open {
     opacity: 1;
     visibility: visible;
-}
+} */
 
 .modal_window {
     position: absolute;
