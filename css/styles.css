@@ -797,7 +797,7 @@ overflow: hidden;
     height: 8px;
 }
 
-.visually_hidden:checked + .checkbox_label .custom_checkbox {
+.visually-hidden:checked + .checkbox_label .custom_checkbox {
     background-color: var(--checkbox-blue, #404bbf);
     border: none;
     fill: var(--icon-white, #F4F4FD);
