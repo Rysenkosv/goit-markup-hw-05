@@ -754,7 +754,7 @@ overflow: hidden;
     margin-bottom: 24px;
 }
 
-.visually_hidden {
+.visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -768,7 +768,7 @@ overflow: hidden;
 }
 
 .checkbox_label {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     font-size: 12px;
     line-height: 1.17;
