@@ -686,7 +686,9 @@ overflow: hidden;
 .form_field {
     margin-bottom: 8px;
 }
-
+.form_field_textarea{
+    margin-bottom: 16px;
+}
 .form_label {
     display: block;
     font-size: 12px;
